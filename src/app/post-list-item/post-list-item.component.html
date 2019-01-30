@@ -1,0 +1,14 @@
+<li [ngClass]="{'list-group-item': true,
+      'list-group-item-success': postStatus === 'green',
+      'list-group-item-danger': postStatus === 'red'}">
+  <div style="height: 40px;">
+    <h4 style="float:left;" [ngStyle]="{color: getColor()}" >Post : {{ postName }} </h4>
+    <p style="float:right;">{{postDate | date:'dd/MM/yyyy, HH:MM' }}</p>
+  </div>
+  <div>
+    <p>{{ postText }}</p>
+    <p> Nombre de like = {{ postLike }}</p>
+    <button style="margin: 6px 8px 6px 8px;" class="btn btn-success" (click)="onLoveIt()">Love it</button>
+    <button style="margin: 6px 8px 6px 8px;" class="btn btn-danger" (click)="onDontLoveIt()">Don't love it</button>
+  </div>
+</li>

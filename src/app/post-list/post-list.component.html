@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Posts</h2>
+      <ul class="list-group">
+
+        <app-post-list-item *ngFor="let postListItem of arrayPosts"
+                       [postName]="postListItem.name"
+                       [postText]="postListItem.text"
+                       [postDate]="postListItem.date"
+                       [postStatus]="postListItem.status"
+                       [postLike]="postListItem.like"></app-post-list-item>
+      </ul>
+    </div>
+  </div>
+</div>
